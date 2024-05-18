@@ -54,30 +54,42 @@ frequency of each pet name in the seattlepets dataset. Then we arrange
 the results in descending order using the arrange(desc(n)) function and
 select the top ten most common names using the top_n(10) function.
 
-\`5. (2 points)
+\`5. (2 points) \`\`\`{r}pig_records \<- seattlepets %\>% filter(species
+== “Pig”) %\>% arrange(animal_name) pig_records
 
-Write your narrative here
+    Write your narrative her eWe use the filter() function to filter the records where the species is "Pig". Then we arrange the results by pet names using the arrange(animal_name) function
 
-\`6. (2 points)
 
-Write your narrative here
 
-\`7. (2 points)
 
-Write your narrative here
+    `6. (2 points)
 
-\`8. (2 points)
+    Write your narrative here
 
-Write your narrative here
 
-\`9. (2 points)
 
-``` r
-top_10_names <- seattlepets %>% 
-filter(animal_name %in% c( "Lucy"  , "Charlie" , "Luna" , "Bella" , "Max"    , 
-                           "Daisy" , "Molly"   , "Jack" , "Lily"  , "Stella" ))
-top_10_names
-```
+
+
+    `7. (2 points)
+
+    Write your narrative here
+
+
+
+    `8. (2 points)
+
+    Write your narrative here
+
+
+
+
+    `9. (2 points)
+
+    ``` r
+    top_10_names <- seattlepets %>% 
+    filter(animal_name %in% c( "Lucy"  , "Charlie" , "Luna" , "Bella" , "Max"    , 
+                               "Daisy" , "Molly"   , "Jack" , "Lily"  , "Stella" ))
+    top_10_names
 
     ## # A tibble: 2,974 × 7
     ##    license_issue_date license_number animal_name species primary_breed          
@@ -120,7 +132,7 @@ exactly the same for dogs and cats.
     ## ℹ Please consider using `annotate()` or provide this layer with data containing
     ##   a single row.
 
-![](Lab_project_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](Lab_project_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 \`What names are more common for cats than dogs? The ones above the line
 or the ones below the line?

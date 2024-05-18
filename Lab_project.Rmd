@@ -68,10 +68,13 @@ Write your narrative here We use the count() function to count the frequency of 
 
 
 `5. (2 points)
-```{r}
+```{r}pig_records <- seattlepets %>%
+  filter(species == "Pig") %>%
+  arrange(animal_name)
+pig_records
 
 ```
-Write your narrative here
+Write your narrative her eWe use the filter() function to filter the records where the species is "Pig". Then we arrange the results by pet names using the arrange(animal_name) function
 
 
 
