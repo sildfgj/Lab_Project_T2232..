@@ -38,10 +38,11 @@ Write your narrative We use the nrow() function to count the number of rows in t
 
 `2. (2 points)
 
-```{r}
+```{r}num_variables <- ncol(seattlepets)
+num_variables
 
 ```
-Write your narrative below
+Write your narrative below We use the ncol() function to count the number of columns in the seattlepets dataset, which gives us the number of variables for each pet.
 
 
 

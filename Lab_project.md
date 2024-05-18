@@ -29,56 +29,45 @@ library(ggrepel)
 
     `2. (2 points)
 
+    ```{r}num_variables <- ncol(seattlepets)
+    num_variables
 
-    Write your narrative below
+Write your narrative below We use the ncol() function to count the
+number of columns in the seattlepets dataset, which gives us the number
+of variables for each pet.
 
+\`3. (2 points)
 
+Write your narrative here
 
-    `3. (2 points)
+\`4. (2 points)
 
-    Write your narrative here
+Write your narrative here
 
+\`5. (2 points)
 
-    `4. (2 points)
+Write your narrative here
 
-    Write your narrative here
+\`6. (2 points)
 
+Write your narrative here
 
-    `5. (2 points)
+\`7. (2 points)
 
-    Write your narrative here
+Write your narrative here
 
+\`8. (2 points)
 
+Write your narrative here
 
+\`9. (2 points)
 
-    `6. (2 points)
-
-    Write your narrative here
-
-
-
-
-
-    `7. (2 points)
-
-    Write your narrative here
-
-
-
-    `8. (2 points)
-
-    Write your narrative here
-
-
-
-
-    `9. (2 points)
-
-    ``` r
-    top_10_names <- seattlepets %>% 
-    filter(animal_name %in% c( "Lucy"  , "Charlie" , "Luna" , "Bella" , "Max"    , 
-                               "Daisy" , "Molly"   , "Jack" , "Lily"  , "Stella" ))
-    top_10_names
+``` r
+top_10_names <- seattlepets %>% 
+filter(animal_name %in% c( "Lucy"  , "Charlie" , "Luna" , "Bella" , "Max"    , 
+                           "Daisy" , "Molly"   , "Jack" , "Lily"  , "Stella" ))
+top_10_names
+```
 
     ## # A tibble: 2,974 × 7
     ##    license_issue_date license_number animal_name species primary_breed          
@@ -121,7 +110,7 @@ exactly the same for dogs and cats.
     ## ℹ Please consider using `annotate()` or provide this layer with data containing
     ##   a single row.
 
-![](Lab_project_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](Lab_project_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 \`What names are more common for cats than dogs? The ones above the line
 or the ones below the line?
