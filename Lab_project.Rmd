@@ -27,10 +27,11 @@ library(ggrepel)
 ## Tasks
 
 `1. (2 points)
-```{r}
+```{r}num_pets <- nrow(seattlepets)
+num_pets
 
 ```
-Write your narrative here
+Write your narrative We use the nrow() function to count the number of rows in the seattlepets dataset, which gives us the number of pets included in the dataset. 
 
 
 

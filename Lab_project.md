@@ -20,46 +20,65 @@ library(ggrepel)
 
 ## Tasks
 
-\`1. (2 points)
+\`1. (2 points) \`\`\`{r}num_pets \<- nrow(seattlepets) num_pets
 
-Write your narrative here
+    Write your narrative We use the nrow() function to count the number of rows in the seattlepets dataset, which gives us the number of pets included in the dataset. 
 
-\`2. (2 points)
 
-Write your narrative below
 
-\`3. (2 points)
 
-Write your narrative here
+    `2. (2 points)
 
-\`4. (2 points)
 
-Write your narrative here
+    Write your narrative below
 
-\`5. (2 points)
 
-Write your narrative here
 
-\`6. (2 points)
+    `3. (2 points)
 
-Write your narrative here
+    Write your narrative here
 
-\`7. (2 points)
 
-Write your narrative here
+    `4. (2 points)
 
-\`8. (2 points)
+    Write your narrative here
 
-Write your narrative here
 
-\`9. (2 points)
+    `5. (2 points)
 
-``` r
-top_10_names <- seattlepets %>% 
-filter(animal_name %in% c( "Lucy"  , "Charlie" , "Luna" , "Bella" , "Max"    , 
-                           "Daisy" , "Molly"   , "Jack" , "Lily"  , "Stella" ))
-top_10_names
-```
+    Write your narrative here
+
+
+
+
+    `6. (2 points)
+
+    Write your narrative here
+
+
+
+
+
+    `7. (2 points)
+
+    Write your narrative here
+
+
+
+    `8. (2 points)
+
+    Write your narrative here
+
+
+
+
+    `9. (2 points)
+
+    ``` r
+    top_10_names <- seattlepets %>% 
+    filter(animal_name %in% c( "Lucy"  , "Charlie" , "Luna" , "Bella" , "Max"    , 
+                               "Daisy" , "Molly"   , "Jack" , "Lily"  , "Stella" ))
+    top_10_names
 
     ## # A tibble: 2,974 × 7
     ##    license_issue_date license_number animal_name species primary_breed          
@@ -102,7 +121,7 @@ exactly the same for dogs and cats.
     ## ℹ Please consider using `annotate()` or provide this layer with data containing
     ##   a single row.
 
-![](Lab_project_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](Lab_project_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 \`What names are more common for cats than dogs? The ones above the line
 or the ones below the line?
