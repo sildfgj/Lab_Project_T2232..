@@ -74,22 +74,28 @@ records where the species is “Goat”. Then we use the select() function
 to choose the columns animal_name and primary_breed. Finally, we sort
 the results by pet names using the arrange(animal_name) function
 
-\`7. (2 points)
+\`7. (2 points) \`\`\`{r}merged_columns \<- seattlepets %\>% mutate(pet
+= paste(animal_name, species, sep = “;”)) %\>% select(license_number,
+pet) %\>% arrange(pet) merged_columns
 
-Write your narrative here
+    Write your narrative here We use the mutate() function to add a new column pet which concatenates the values from animal_name and species using the paste() function with a separator "; ". Then we use the select() function to choose the columns license_number and pet. Finally, we sort the results by the pet column using the arrange(pet) function.
 
-\`8. (2 points)
 
-Write your narrative here
 
-\`9. (2 points)
+    `8. (2 points)
 
-``` r
-top_10_names <- seattlepets %>% 
-filter(animal_name %in% c( "Lucy"  , "Charlie" , "Luna" , "Bella" , "Max"    , 
-                           "Daisy" , "Molly"   , "Jack" , "Lily"  , "Stella" ))
-top_10_names
-```
+    Write your narrative here
+
+
+
+
+    `9. (2 points)
+
+    ``` r
+    top_10_names <- seattlepets %>% 
+    filter(animal_name %in% c( "Lucy"  , "Charlie" , "Luna" , "Bella" , "Max"    , 
+                               "Daisy" , "Molly"   , "Jack" , "Lily"  , "Stella" ))
+    top_10_names
 
     ## # A tibble: 2,974 × 7
     ##    license_issue_date license_number animal_name species primary_breed          
@@ -132,7 +138,7 @@ exactly the same for dogs and cats.
     ## ℹ Please consider using `annotate()` or provide this layer with data containing
     ##   a single row.
 
-![](Lab_project_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](Lab_project_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 \`What names are more common for cats than dogs? The ones above the line
 or the ones below the line?

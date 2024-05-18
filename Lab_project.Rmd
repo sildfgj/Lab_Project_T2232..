@@ -94,10 +94,14 @@ Write your narrative here We use the filter() function to select the records whe
 
 
 `7. (2 points)
-```{r}
+```{r}merged_columns <- seattlepets %>%
+  mutate(pet = paste(animal_name, species, sep = "; ")) %>%
+  select(license_number, pet) %>%
+  arrange(pet)
+merged_columns
 
 ```
-Write your narrative here
+Write your narrative here We use the mutate() function to add a new column pet which concatenates the values from animal_name and species using the paste() function with a separator "; ". Then we use the select() function to choose the columns license_number and pet. Finally, we sort the results by the pet column using the arrange(pet) function.
 
 
 
