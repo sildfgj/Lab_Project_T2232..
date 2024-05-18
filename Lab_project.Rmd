@@ -57,10 +57,14 @@ Write your narrative here We use the count() function to count the number of pet
 
 
 `4. (2 points)
-```{r}
+```{r}common_pet_names <- seattlepets %>%
+  count(animal_name) %>%
+  arrange(desc(n)) %>%
+  top_n(10)
+common_pet_names
 
 ```
-Write your narrative here
+Write your narrative here We use the count() function to count the frequency of each pet name in the seattlepets dataset. Then we arrange the results in descending order using the arrange(desc(n)) function and select the top ten most common names using the top_n(10) function.
 
 
 `5. (2 points)
