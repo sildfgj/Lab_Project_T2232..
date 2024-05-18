@@ -143,7 +143,9 @@ top_10_names
 
 top_10_plot
 
-```
+```Ex:  1. We filter the seattlepets dataset to include only the records where animal_name is in top_10_names using filter(animal_name %in% top_10_names).
+2. We then use ggplot2 to create a bar plot where the x-axis represents animal_name and the fill color represents the species. The geom_bar(position = "dodge") creates a bar plot with bars for different species side by side. 
+3. Finally, we add labels and a minimal theme for better readability.:
 
 
 `10.  (2 points)

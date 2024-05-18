@@ -135,35 +135,34 @@ fill = “Species”) + theme_minimal()
 
 top_10_plot
 
+\`\`\`Ex: 1. We filter the seattlepets dataset to include only the
+records where animal_name is in top_10_names using filter(animal_name
+%in% top_10_names). 2. We then use ggplot2 to create a bar plot where
+the x-axis represents animal_name and the fill color represents the
+species. The geom_bar(position = “dodge”) creates a bar plot with bars
+for different species side by side. 3. Finally, we add labels and a
+minimal theme for better readability.:
 
+\`10. (2 points)
 
-    `10.  (2 points)
+\`The below code plots the proportion of dogs with a given name versus
+the proportion of cats with the same name. The 20 most common cat and
+dog names are displayed. The diagonal line on the plot is the x = y
+line; if a name appeared on this line, the name’s popularity would be
+exactly the same for dogs and cats.
 
-    `The below code plots the proportion of dogs with a given name versus the proportion of cats with the same name. The 20 most common cat and dog names are displayed. The diagonal line on the plot is the x = y line; if a name appeared on this line, the name’s popularity would be exactly the same for dogs and cats.
+    ## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+    ## ℹ Please use `linewidth` instead.
+    ## This warning is displayed once every 8 hours.
+    ## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+    ## generated.
 
-## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-
-## ℹ Please use `linewidth` instead.
-
-## This warning is displayed once every 8 hours.
-
-## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
-
-## generated.
-
-## Warning in geom_image(mapping, data, inherit.aes = inherit.aes, na.rm = na.rm, : All aesthetics have length 1, but the data has 20 rows.
-
-## ℹ Please consider using `annotate()` or provide this layer with data containing
-
-## a single row.
-
-## All aesthetics have length 1, but the data has 20 rows.
-
-## ℹ Please consider using `annotate()` or provide this layer with data containing
-
-## a single row.
-
-\`\`\`
+    ## Warning in geom_image(mapping, data, inherit.aes = inherit.aes, na.rm = na.rm, : All aesthetics have length 1, but the data has 20 rows.
+    ## ℹ Please consider using `annotate()` or provide this layer with data containing
+    ##   a single row.
+    ## All aesthetics have length 1, but the data has 20 rows.
+    ## ℹ Please consider using `annotate()` or provide this layer with data containing
+    ##   a single row.
 
 ![](Lab_project_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
