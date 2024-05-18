@@ -80,10 +80,14 @@ Write your narrative her eWe use the filter() function to filter the records whe
 
 
 `6. (2 points)
-```{r}
+```{r}goat_records <- seattlepets %>%
+  filter(species == "Goat") %>%
+  select(animal_name, primary_breed) %>%
+  arrange(animal_name)
+goat_records
 
 ```
-Write your narrative here
+Write your narrative here We use the filter() function to select the records where the species is "Goat". Then we use the select() function to choose the columns animal_name and primary_breed. Finally, we sort the results by pet names using the arrange(animal_name) function
 
 
 
