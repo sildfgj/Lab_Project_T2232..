@@ -122,40 +122,66 @@ top_10_names
     ## # ℹ 2,964 more rows
     ## # ℹ 2 more variables: secondary_breed <chr>, zip_code <chr>
 
-\`a. What does the above code chunk do?
+\`a. What does the above code chunk do? This code defines a vector
+top_10_names that contains the 10 most common pet names identified in
+Task 4. This list will be used to filter and analyze the dataset for
+these specific pet names.
 
 \`b. Plot the counts of the pet names (animal_name) in top_10_names
+\`\`\`{r}top_10_plot \<- top_10_data %\>% ggplot(aes(x = animal_name,
+fill = species)) + geom_bar(position = “dodge”) + labs(title = “Counts
+of Top 10 Pet Names Segmented by Species”, x = “Pet Name”, y = “Count”,
+fill = “Species”) + theme_minimal()
 
-\`10. (2 points)
+top_10_plot
 
-\`The below code plots the proportion of dogs with a given name versus
-the proportion of cats with the same name. The 20 most common cat and
-dog names are displayed. The diagonal line on the plot is the x = y
-line; if a name appeared on this line, the name’s popularity would be
-exactly the same for dogs and cats.
 
-    ## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-    ## ℹ Please use `linewidth` instead.
-    ## This warning is displayed once every 8 hours.
-    ## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
-    ## generated.
 
-    ## Warning in geom_image(mapping, data, inherit.aes = inherit.aes, na.rm = na.rm, : All aesthetics have length 1, but the data has 20 rows.
-    ## ℹ Please consider using `annotate()` or provide this layer with data containing
-    ##   a single row.
-    ## All aesthetics have length 1, but the data has 20 rows.
-    ## ℹ Please consider using `annotate()` or provide this layer with data containing
-    ##   a single row.
+    `10.  (2 points)
 
-![](Lab_project_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+    `The below code plots the proportion of dogs with a given name versus the proportion of cats with the same name. The 20 most common cat and dog names are displayed. The diagonal line on the plot is the x = y line; if a name appeared on this line, the name’s popularity would be exactly the same for dogs and cats.
+
+## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+
+## ℹ Please use `linewidth` instead.
+
+## This warning is displayed once every 8 hours.
+
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+
+## generated.
+
+## Warning in geom_image(mapping, data, inherit.aes = inherit.aes, na.rm = na.rm, : All aesthetics have length 1, but the data has 20 rows.
+
+## ℹ Please consider using `annotate()` or provide this layer with data containing
+
+## a single row.
+
+## All aesthetics have length 1, but the data has 20 rows.
+
+## ℹ Please consider using `annotate()` or provide this layer with data containing
+
+## a single row.
+
+\`\`\`
+
+![](Lab_project_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 \`What names are more common for cats than dogs? The ones above the line
 or the ones below the line?
 
-\`Answer here………………
+\`Answer here In the plot, names that are more common for cats than dogs
+will be above the diagonal line $x = y$. This is because the proportion
+of cats with these names is higher than the proportion of dogs with the
+same names.
 
 \`Is the relationship between the two variables (proportion of cats with
 a given name and proportion of dogs with a given name) positive or
 negative? What does this mean in context of the data?
 
-\`Answer here ………….
+\`Answer here The relationship between the proportion of cats with a
+given name and the proportion of dogs with the same name is positive.
+This means that names that are popular for cats tend to also be popular
+for dogs. In the context of the data, it indicates a general trend where
+pet names are chosen similarly for both species, although specific names
+might be slightly more popular for one species over the other.

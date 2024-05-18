@@ -127,12 +127,21 @@ filter(animal_name %in% c( "Lucy"  , "Charlie" , "Luna" , "Bella" , "Max"    ,
                            "Daisy" , "Molly"   , "Jack" , "Lily"  , "Stella" ))
 top_10_names
 ```
-`a.	What does the above code chunk do?
+`a.	What does the above code chunk do? This code defines a vector top_10_names that contains the 10 most common pet names identified in Task 4. This list will be used to filter and analyze the dataset for these specific pet names.
 
 
 
 `b. Plot the counts of the pet names (animal_name) in top_10_names
-```{r}
+```{r}top_10_plot <- top_10_data %>%
+  ggplot(aes(x = animal_name, fill = species)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Counts of Top 10 Pet Names Segmented by Species",
+       x = "Pet Name",
+       y = "Count",
+       fill = "Species") +
+  theme_minimal()
+
+top_10_plot
 
 ```
 
@@ -191,11 +200,11 @@ ggplot(comb_name_props, aes(x = cat_prop, y = dog_prop)) +
 
 `What names are more common for cats than dogs? The ones above the line or the ones below the line?
 
-`Answer here..................
+`Answer here In the plot, names that are more common for cats than dogs will be above the diagonal line \(x = y\). This is because the proportion of cats with these names is higher than the proportion of dogs with the same names.
 
 
 
 `Is the relationship between the two variables (proportion of cats with a given name and proportion of dogs with a given name) positive or negative? What does this mean in context of the data?
 
-`Answer here .............
+`Answer here The relationship between the proportion of cats with a given name and the proportion of dogs with the same name is positive. This means that names that are popular for cats tend to also be popular for dogs. In the context of the data, it indicates a general trend where pet names are chosen similarly for both species, although specific names might be slightly more popular for one species over the other.
 
