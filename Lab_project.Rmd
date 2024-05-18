@@ -47,10 +47,13 @@ Write your narrative below We use the ncol() function to count the number of col
 
 
 `3. (2 points)
-```{r}
+```{r}species_count <- seattlepets %>%
+  count(species) %>%
+  arrange(desc(n))
+species_count
 
 ```
-Write your narrative here
+Write your narrative here We use the count() function to count the number of pets for each species in the seattlepets dataset. Then we arrange the results in descending order using the arrange(desc(n)) function.
 
 
 `4. (2 points)
