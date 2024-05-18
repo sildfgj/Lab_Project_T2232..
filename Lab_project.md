@@ -83,19 +83,28 @@ pet) %\>% arrange(pet) merged_columns
 
 
     `8. (2 points)
+    ```{r}species_plot <- seattlepets %>%
+      ggplot(aes(x = species)) +
+      geom_bar() +
+      labs(title = "Counts of Pet Species in Seattle", x = "Species", y = "Count") +
+      theme_minimal()
 
-    Write your narrative here
+    species_plot
 
+Write your narrative here We use ggplot2 to create a bar plot displaying
+the counts of pet species. We specify species as the x-axis using aes(x
+= species), then use geom_bar() to create the bars. We add a title and
+labels for the axes using labs(), and apply a minimal theme with
+theme_minimal() to improve the appearance of the plot.
 
+\`9. (2 points)
 
-
-    `9. (2 points)
-
-    ``` r
-    top_10_names <- seattlepets %>% 
-    filter(animal_name %in% c( "Lucy"  , "Charlie" , "Luna" , "Bella" , "Max"    , 
-                               "Daisy" , "Molly"   , "Jack" , "Lily"  , "Stella" ))
-    top_10_names
+``` r
+top_10_names <- seattlepets %>% 
+filter(animal_name %in% c( "Lucy"  , "Charlie" , "Luna" , "Bella" , "Max"    , 
+                           "Daisy" , "Molly"   , "Jack" , "Lily"  , "Stella" ))
+top_10_names
+```
 
     ## # A tibble: 2,974 × 7
     ##    license_issue_date license_number animal_name species primary_breed          
@@ -138,7 +147,7 @@ exactly the same for dogs and cats.
     ## ℹ Please consider using `annotate()` or provide this layer with data containing
     ##   a single row.
 
-![](Lab_project_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](Lab_project_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 \`What names are more common for cats than dogs? The ones above the line
 or the ones below the line?

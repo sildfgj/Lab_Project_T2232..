@@ -106,10 +106,16 @@ Write your narrative here We use the mutate() function to add a new column pet w
 
 
 `8. (2 points)
-```{r}
+```{r}species_plot <- seattlepets %>%
+  ggplot(aes(x = species)) +
+  geom_bar() +
+  labs(title = "Counts of Pet Species in Seattle", x = "Species", y = "Count") +
+  theme_minimal()
+
+species_plot
 
 ```
-Write your narrative here
+Write your narrative here We use ggplot2 to create a bar plot displaying the counts of pet species. We specify species as the x-axis using aes(x = species), then use geom_bar() to create the bars. We add a title and labels for the axes using labs(), and apply a minimal theme with theme_minimal() to improve the appearance of the plot. 
 
 
 
