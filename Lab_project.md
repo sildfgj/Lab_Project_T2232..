@@ -1,8 +1,8 @@
 DSC 200 Lab Project -Term 2232
 ================
-2024-05-18
+2024-05-20
 
-**Student Name:<insert your name here>**wajdan
+**Student Name:<insert your name here>**wajdan..
 
 **Student ID:<insert ID here>**2221003984
 
